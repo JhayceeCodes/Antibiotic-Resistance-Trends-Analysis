@@ -19,3 +19,4 @@
 ### Miscellaneous
 - Which antibiotics are becoming less effective against specific organisms?
 - What culture types show the highest resistance burden?
+- Monthly trend of antibiotic resistance
