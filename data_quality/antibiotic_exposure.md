@@ -25,6 +25,7 @@ The table contains:
 | DQ-001   | days_before_culture   | Very long historical exposure windows (>10 years prior to culture) observed                                                           | Low                | 137,395 rows (2.54%) | Yes       | Retained after validation since exposure windows remain plausible within the dataset collection timeline and patient age ranges | Interpreted |
 | DQ-002   | med_category          | Encoded medication category abbreviations require metadata interpretation due to undocumented suffix variants (e.g., `CIP1`, `CEF10`) | Low                | Multiple codes       | Partially | Retained as auxiliary metadata since medication and antibiotic class fields provide interpretable clinical meaning              | Interpreted |
 | DQ-003   | exposure multiplicity | Multiple exposure records observed for single culture orders due to longitudinal medication history                                   | Expected Structure | Multiple rows        | N/A       | Retained as valid many-to-one exposure relationship                                                                             | Interpreted |
+| DQ-004   | medication | Medication names are recorded as a mix of brand names, generic names, and formulation variants without standardization. For example, Zyvox and Linezolid refer to the same Oxazolidinone drug, and formulation variants such as Ceftazidime and Ceftazidime-Dextrose appear as distinct entries | Moderate | Multiple rows | Partially | Retained as recorded. Resistance analysis performed at antibiotic class level for greater accuracy. Medication-level rankings should be interpreted with caution. A medication name mapping table would be required to fully resolve this | Interpreted |
 
 ---
 ## DQ-001 Detection Query
@@ -149,6 +150,7 @@ LEFT JOIN cohort_results c
 | OBS-002        | Most exposure histories fall within the 1–5 year period before culture collection                                              |
 | OBS-003        | Beta-lactam-related antibiotic classes and Fluoroquinolones constitute a substantial proportion of historical exposure records   |
 | OBS-004        | Exposure history is longitudinal in nature, resulting in many-to-one relationships between exposure records and culture orders |
+| OBS-005        | Medication names contain brand name, generic name, and formulation duplicates which may understate resistance rates at the individual medication level. Antibiotic class grouping is recommended as the more reliable unit of analysis |
 
 
 
