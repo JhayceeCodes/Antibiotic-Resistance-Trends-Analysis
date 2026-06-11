@@ -5,16 +5,16 @@
 ![Records](https://img.shields.io/badge/Records-2.15M%2B-lightgrey)
 ## Background and Overview
 
-Antibiotic resistance is a growing global public health threat. The WHO 2025 
-GLASS report highlights widespread and increasing resistance across 104 countries, 
-with over 23 million confirmed infections reported worldwide.
+This project analyses **2.15 million+ clinical culture records** from 
+Stanford Healthcare EHRs spanning 2008–2023, investigating the culprits, 
+patterns, and drivers of antibiotic resistance across demographics, 
+care settings, organisms, and socioeconomic contexts.
 
-Understanding resistance patterns is critical for improving treatment outcomes 
-and strengthening antimicrobial stewardship efforts. This project explores 
-demographic, clinical, microbiological, and socioeconomic factors associated 
-with antibiotic resistance using large-scale clinical microbiology data — 
-identifying the culprits, patterns, and drivers of resistance across a 
-16-year observation period.
+Antibiotic resistance is a growing global public health threat. The WHO 
+2025 GLASS report confirms resistance is widespread and increasing across 
+104 countries and 23 million confirmed infections. Yet resistance patterns 
+vary considerably at the local level — understanding those variations is 
+critical for targeted intervention.
 
 **Dataset:** Antibiotic Resistance Microbiology Dataset (ARMD) — Oct 22, 2025 version  
 **Authors:** Deresinski, S.; Asch, S.; Goldstein, M.; Chen, J.  
@@ -307,8 +307,10 @@ Full organism and antibiotic ranked tables — resistance rate and burden
 ![Care Settings](assets/charts/Resistance_distribution_across_care_settings.png) ![Inpatient Ward Partition](assets/charts/Inpatients_ward_partition.png)
 Care setting bar chart and inpatient ward partition chart
 
-### Appendix C
-Antibiotic class resistance table and exposure recency bar charts
+### Appendix C — Antibiotic Exposure Analysis
+
+![Antibiotic Class Resistance](assets/charts/Resistance_rate_by_prior_antibiotic_class_exp.png)
+![Exposure Recency](assets/charts/Resistance_rate_by_prior_antibiotic_exp_recency.png)
 
 ### Appendix D — Data Quality Reports
 
