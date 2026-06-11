@@ -1,3 +1,19 @@
+## Dataset Scope
+
+The original ARMD dataset contains additional tables and variables.
+This project uses only the subset of tables relevant to the study objectives:
+
+- Cohort
+- Demographics
+- Ward Information
+- Prior Infecting Organisms
+- Antibiotic Exposure
+- ADI Scores
+
+Unused tables from the original dataset were excluded from the analytical model.
+
+
+
 ### Schema
 ```bash
                 demographics
