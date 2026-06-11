@@ -311,10 +311,10 @@ Antibiotic class resistance table and exposure recency bar charts
 
 Detailed data quality assessments are available for each table:
 
-- [Cohort Results](data_quality/cohort.md)
+- [Cohort Results](data_quality/cohort_results.md)
 - [Demographics](data_quality/demographics.md)
 - [Antibiotic Exposure](data_quality/antibiotic_exposure.md)
-- [Prior Infecting Organisms](data_quality/prior_infecting_organism.md)
+- [Prior Infecting Organisms](data_quality/prior_infections.md)
 - [Ward Information](data_quality/ward_info.md)
 - [ADI Scores](data_quality/adi_scores.md)
 
