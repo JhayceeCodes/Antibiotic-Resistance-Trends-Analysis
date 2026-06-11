@@ -1,5 +1,8 @@
 # Antibiotic Resistance Trends Analysis
-
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![Apache Superset](https://img.shields.io/badge/Apache%20Superset-Visualization-orange)
+![Dataset](https://img.shields.io/badge/Dataset-ARMD%20Oct%202025-green)
+![Records](https://img.shields.io/badge/Records-2.15M%2B-lightgrey)
 ## Background and Overview
 
 Antibiotic resistance is a growing global public health threat. The WHO 2025 
