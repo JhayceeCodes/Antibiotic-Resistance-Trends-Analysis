@@ -307,19 +307,14 @@ trends. Tetracycline recorded the most dramatic single-period spike at
 
 ## Appendices
 
-### Appendix A
-![Organism and Antibiotics Resistance Dashboard](assets/dashboards/Organism_&_antibiotics.png)
-Full organism and antibiotic ranked tables — resistance rate and burden
+### Appendix A — Organisms & Antibiotics Dashboard
+![Organisms and Antibiotics](assets/dashboards/Organism_&_antibiotics.png)
 
+### Appendix B — Resistance Trends Dashboard
+![Resistance Trends](assets/dashboards/Resistance_trends.png)
 
-### Appendix B
-![Care Settings](assets/charts/Resistance_distribution_across_care_settings.png) ![Inpatient Ward Partition](assets/charts/Inpatients_ward_partition.png)
-Care setting bar chart and inpatient ward partition chart
-
-### Appendix C — Antibiotic Exposure Analysis
-
-![Antibiotic Class Resistance](assets/charts/Resistance_rate_by_prior_antibiotic_class_exp.png)
-![Exposure Recency](assets/charts/Resistance_rate_by_prior_antibiotic_exp_recency.png)
+### Appendix C — Resistance Drivers Dashboard
+![Resistance Drivers](assets/dashboards/Resistance_drivers.png)
 
 ### Appendix D — Data Quality Reports
 
