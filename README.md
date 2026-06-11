@@ -131,7 +131,7 @@ Visualization techniques included:
 
 ### 1. Organism & Antibiotic Resistance Patterns
 
-![Organism Resistance Dashboard](assets/dashboards/Organism_&_antibiotics.png)
+![Organism Resistance Case Count](assets/charts/Org_resistance_case_count.png)
 
 *E. coli* dominates resistance burden, accounting for nearly half of all 
 resistant cases in the dataset. However, burden and rate tell different 
@@ -169,6 +169,8 @@ more likely drivers than healthcare exposure.
 
 ### 3. Ward-Based Resistance Analysis
 
+![Ward-Based Resistance](assets/charts/Inpatients_ward_partition.png)
+
 Inpatient settings show higher resistance rates (17.67%) than outpatient 
 settings (15.30%), consistent with greater antibiotic pressure in hospital 
 environments. Within inpatient settings, Standard Ward (21.25%) paradoxically 
@@ -185,6 +187,8 @@ within the ward partition.
 ---
 
 ### 4. Antibiotic Effectiveness & Prior Exposure
+
+![Antibiotic Exposure](assets/charts/Resistance_rate_by_prior_antibiotic_class_exp.png)
 
 Among patients with prior antibiotic exposure, Oxazolidinone (36.09%), 
 Polymyxin/Lipopeptide (33.52%), and Monobactam (30.36%) classes show the 
@@ -208,6 +212,8 @@ exposure recency charts.
 
 ### 5. Socioeconomic Deprivation & Resistance (ADI)
 
+![ADI & Deprivation](assets/charts/Resistance_rate_by_ADI.png)
+
 A clear positive correlation exists between Area Deprivation Index (ADI) 
 score and resistance rate. Patients from the most deprived communities face 
 approximately 10 percentage points higher resistance rates than the least 
@@ -223,6 +229,9 @@ resistance driver.
 
 ### 6. Prior Infection Impact
 
+
+![Prior Infection](assets/charts/Resistance_rate_by_time_since_prior_infection.png)
+
 Resistance rates remain consistently between 23.63% and 24.37% across all 
 prior infection recency buckets from within 30 days through 2–5 years, with 
 only a modest decline to 21.35% beyond 10 years. This mirrors the antibiotic 
@@ -237,7 +246,7 @@ infection warrants consideration regardless of timing.
 
 ### 7. Temporal Resistance Trends
 
-![Resistance Trends Dashboard](assets/dashboards/Resistance_trends.png)
+![Temporal Trends](assets/charts/Overall_antibiotic_resistance_rate.png)
 
 Overall resistance rates climbed from ~22% in 2008 to a peak of ~24% in 2013, 
 followed by a consistent decline and a sharp ~5% dip between 2016 and 2017. 
@@ -325,5 +334,21 @@ Detailed data quality assessments are available for each table:
 
 Each report includes completeness checks, duplicate analysis, distribution reviews, and analytical considerations.
 
-### Appendix E
-Full SQL queries used for each objective
+### Appendix E — SQL Queries
+
+All data cleaning, validation, and quality check queries are documented 
+inline within each table's data quality report:
+
+| Table | Queries |
+|-------|---------|
+| Cohort Results | [View](data_quality/cohort_results.md) |
+| Demographics | [View](data_quality/demographics.md) |
+| Antibiotic Exposure | [View](data_quality/antibiotic_exposure.md) |
+| Prior Infecting Organisms | [View](data_quality/prior_infections.md) |
+| Ward Information | [View](data_quality/ward_info.md) |
+| ADI Scores | [View](data_quality/adi_scores.md) |
+
+Visualization and analytical queries are available in:
+- [visuals_query.sql](sql/analysis_queries.sql)
+- [schema.sql](sql/schema.sql)
+- [indexes.sql](sql/indexes.sql)
