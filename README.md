@@ -3,6 +3,27 @@
 ![Apache Superset](https://img.shields.io/badge/Apache%20Superset-Visualization-orange)
 ![Dataset](https://img.shields.io/badge/Dataset-ARMD%20Oct%202025-green)
 ![Records](https://img.shields.io/badge/Records-2.15M%2B-lightgrey)
+
+📊 [View Presentation Slides](https://canva.link/cuzcdaejn5g89qx)
+
+## Table of Contents
+- [Background and Overview](#background-and-overview)
+- [Data Structure Overview](#data-structure-overview)
+- [Executive Summary](#executive-summary)
+- [Methodology](#methodology)
+- [Insights Deep Dive](#insights-deep-dive)
+  - [1. Organism & Antibiotic Resistance Patterns](#1-organism--antibiotic-resistance-patterns)
+  - [2. Demographic Resistance Trends](#2-demographic-resistance-trends)
+  - [3. Ward-Based Resistance Analysis](#3-ward-based-resistance-analysis)
+  - [4. Antibiotic Effectiveness & Prior Exposure](#4-antibiotic-effectiveness--prior-exposure)
+  - [5. Socioeconomic Deprivation & Resistance (ADI)](#5-socioeconomic-deprivation--resistance-adi)
+  - [6. Prior Infection Impact](#6-prior-infection-impact)
+  - [7. Temporal Resistance Trends](#7-temporal-resistance-trends)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [Appendices](#appendices)
+- [References](#references)
+
 ## Background and Overview
 
 This project analyses **2.15 million+ clinical culture records** from 
@@ -13,11 +34,11 @@ care settings, organisms, and socioeconomic contexts.
 Antibiotic resistance is a growing global public health threat. The WHO 
 2025 GLASS report confirms resistance is widespread and increasing across 
 104 countries and 23 million confirmed infections. Yet resistance patterns 
-vary considerably at the local level — understanding those variations is 
+vary considerably at the local level, understanding those variations is 
 critical for targeted intervention.
 
 **Dataset:** Antibiotic Resistance Microbiology Dataset (ARMD) — Oct 22, 2025 version  
-**Authors:** Deresinski, S.; Asch, S.; Goldstein, M.; Chen, J.  
+**Authors:** Nateghi Haredasht, F. et al.  
 **Source:** Dryad · DOI: [10.5061/dryad.jq2bvq8kp](https://doi.org/10.5061/dryad.jq2bvq8kp)  
 **Tools:** MySQL · Apache Superset   
 
@@ -37,21 +58,22 @@ critical for targeted intervention.
 
 ![Executive Summary Dashboard](assets/dashboards/Executive_summary.jpg)
 
-Antibiotic resistance in this dataset is multifactorial rather than driven 
-by a single cause. *E. coli* accounts for the largest resistance burden at 
-47.55% of all resistant cases, while carbapenem-resistant variants of 
-*Klebsiella pneumoniae* (69.35%) and *E. coli* (64.74%) exhibit the highest 
-resistance rates. Beta Lactam carries the largest prior antibiotic exposure 
-footprint at 5.67M cases, with Ampicillin, Erythromycin, and Penicillin 
-remaining the most resistance-prone individual antibiotics.
+Antibiotic resistance in this dataset is multifactorial rather than driven
+by a single cause. *Escherichia coli* accounts for the largest resistance burden at
+47.55% of all resistant cases, while carbapenem-resistant variants of
+*Klebsiella pneumoniae* (69.35%) and *E. coli* (64.74%) exhibit the highest
+resistance rates. Among individually tested antibiotics, Erythromycin,
+Ampicillin, and Penicillin show the highest resistance rates, while
+last-resort classes such as Oxazolidinone and Polymyxin/Lipopeptide show
+elevated resistance among patients with prior exposure history.
 
-Resistance is not confined to any single demographic or setting; it is 
-shaped by organism type, antibiotic exposure history, patient age, care 
-setting, and socioeconomic deprivation simultaneously. The overall resistance 
-rate has declined from a peak of ~24% in 2013 to ~13–14% by 2023, suggesting 
-stewardship efforts are having measurable impact. However, resistance in 
-last-resort drug classes and carbapenem-resistant organisms signals that 
-critical vulnerabilities remain.
+Resistance is not confined to any single demographic or setting; it is
+shaped by organism type, antibiotic exposure history, patient age, care
+setting, and socioeconomic deprivation simultaneously. The overall resistance
+rate has declined from a peak of ~24% in 2013 to ~13–14% by 2023, suggesting
+stewardship efforts are having measurable impact. However, the persistence
+of carbapenem-resistant organisms and elevated resistance in last-resort
+drug classes signals that critical vulnerabilities remain.
 
 ---
 
@@ -142,10 +164,10 @@ followed by *Chryseobacterium indologenes* at 61.69%.
 On the antibiotic side, Erythromycin (49.77%), Ampicillin (48.12%), and 
 Penicillin (41.29%) record the highest resistance rates from susceptibility 
 testing. Beta Lactam carries the largest prior exposure footprint at 5.67M 
-cases — reinforcing the carbapenem resistance pressure observed at the 
+cases, reinforcing the carbapenem resistance pressure observed at the 
 organism level.
 
-> See [Appendix A](#appendix-a) for full organism and antibiotic ranked tables.
+> See [Appendix A](#appendix-a--organisms--antibiotics-dashboard) for the full organisms and antibiotics dashboard, including top 15 ranked tables.
 
 ---
 
@@ -182,7 +204,7 @@ likely drive resistance rates higher. The inpatient-outpatient gap of 2.37
 percentage points is modest; the more clinically significant story lies 
 within the ward partition.
 
-> See [Appendix B](#appendix-b) for care setting and ward partition charts.
+> See [Appendix C](#appendix-c--resistance-drivers-dashboard) for care setting and ward partition charts.
 
 ---
 
@@ -205,8 +227,7 @@ how recently exposure occurred.
 A notable spike: Tetracycline recorded 77–80% resistance rates between 
 2013–2015 before declining sharply, likely reflecting reduced clinical use.
 
-> See [Appendix C](#appendix-c) for antibiotic class resistance table and 
-exposure recency charts.
+> See [Appendix B](#appendix-b--resistance-trends-dashboard) for the antibiotic effectiveness heatmap and exposure recency chart, and [Appendix C](#appendix-c--resistance-drivers-dashboard) for the antibiotic class resistance table.
 
 ---
 
@@ -217,7 +238,7 @@ exposure recency charts.
 A clear positive correlation exists between Area Deprivation Index (ADI) 
 score and resistance rate. Patients from the most deprived communities face 
 approximately 10 percentage points higher resistance rates than the least 
-deprived — rising from ~15% at ADI 1 to ~25% at ADI 98.
+deprived, rising from ~15% at ADI 1 to ~25% at ADI 98.
 
 ADI groups with fewer than 100 records were excluded to ensure statistical 
 reliability, removing 12 of 99 ADI groups. The trendline (y = 0.1x + 15) 
@@ -239,7 +260,7 @@ exposure recency finding almost exactly.
 
 Prior infection history establishes a persistent resistance profile that does 
 not decay meaningfully with time. Resistance screening should not be limited 
-to patients with recent infection histories — anyone with a documented prior 
+to patients with recent infection histories, anyone with a documented prior 
 infection warrants consideration regardless of timing.
 
 ---
@@ -260,6 +281,7 @@ Erythromycin, and Penicillin remain persistently high and show worsening
 trends. Tetracycline recorded the most dramatic single-period spike at 
 77–80% between 2013–2015 before declining sharply.
 
+> See [Appendix B](#appendix-b--resistance-trends-dashboard) for the full resistance trends dashboard.
 ---
 
 ## Recommendations
@@ -336,14 +358,27 @@ inline within each table's data quality report:
 
 | Table | Queries |
 |-------|---------|
-| Cohort Results | [View](data_quality/cohort_results.md) |
-| Demographics | [View](data_quality/demographics.md) |
-| Antibiotic Exposure | [View](data_quality/antibiotic_exposure.md) |
-| Prior Infecting Organisms | [View](data_quality/prior_infections.md) |
-| Ward Information | [View](data_quality/ward_info.md) |
-| ADI Scores | [View](data_quality/adi_scores.md) |
+| Cohort Results | [View](data_quality/cohort_results.md#dq-002--dq-003-detection-query) |
+| Demographics | [View](data_quality/demographics.md#dq-001) |
+| Antibiotic Exposure | [View](data_quality/antibiotic_exposure.md#dq-001-detection-query) |
+| Prior Infecting Organisms | [View](data_quality/prior_infections.md#dv-queries) |
+| Ward Information | [View](data_quality/ward_info.md#dq-001-detection-query) |
+| ADI Scores | [View](data_quality/adi_scores.md#dq-001--dq-002-detection-query) |
 
 Visualization and analytical queries are available in:
-- [visuals_query.sql](sql/analysis_queries.sql)
 - [schema.sql](sql/schema.sql)
 - [indexes.sql](sql/indexes.sql)
+- [analysis_queries.sql](sql/analysis_queries.sql)
+
+---
+
+## References
+
+Nateghi Haredasht, F.; Amrollahi, F.; Maddali, M.; Marshall, N.; Ma, S.; 
+Chang, A.; Banaei, N.; Deresinski, S.; Asch, S.; Goldstein, M.; Chen, J. 
+(2025). Antibiotic Resistance Microbiology Dataset (ARMD): A resource for 
+antimicrobial resistance from EHRs [Dataset]. Dryad. 
+https://doi.org/10.5061/dryad.jq2bvq8kp
+
+World Health Organization. (2025). Global antibiotic resistance 
+surveillance report 2025. WHO.
