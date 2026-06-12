@@ -4,7 +4,7 @@
 ![Dataset](https://img.shields.io/badge/Dataset-ARMD%20Oct%202025-green)
 ![Records](https://img.shields.io/badge/Records-2.15M%2B-lightgrey)
 
-📊 [View Presentation Slides](https://canva.link/cuzcdaejn5g89qx)
+📊 [View Presentation Slides](https://canva.link/cuzcdaejn5g89qx) · 🎥 [Watch Recorded Presentation](https://youtu.be/53-oGsb_Vyo)
 
 ## Table of Contents
 - [Background and Overview](#background-and-overview)
